@@ -7,10 +7,10 @@ public class RecursionTask {
 
     public static int numsProduct(int n){
         if (n == 0) {
-            return 0;
+            return list.getFirst();
         }
         else {
-            return list.get(n); //* numsProduct(n-1);
+            return list.get(n) * numsProduct(n-1);
 
         }}
 
@@ -34,7 +34,9 @@ public class RecursionTask {
         System.out.println("Enter fifth integer: ");
         int fifth = scnr.nextInt();
         list.add(fifth);
-        System.out.println(numsProduct(4));
+        int outputVal = numsProduct(list.size()-1);
+
+        System.out.println("All elements of list multiplied by one another: " + outputVal);
 
     }
 }
