@@ -1,18 +1,14 @@
 import java.util.ArrayList;
 import java.util.Scanner;
-
 public class RecursionTask {
     private static ArrayList<Integer> list = new ArrayList<>();
-
     public static int numsProduct(int n){
         if (n == 0) {
             return list.getFirst();
         }
         else {
             return list.get(n) * numsProduct(n-1);
-
         }}
-
     public static void main(String[] args) {
         Scanner scnr = new Scanner(System.in);
         System.out.println("Enter first integer: ");
