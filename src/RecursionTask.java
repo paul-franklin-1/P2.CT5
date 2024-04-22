@@ -4,7 +4,6 @@ import java.util.Scanner;
 public class RecursionTask {
     private static ArrayList<Integer> list = new ArrayList<>();
 
-
     public static int numsProduct(int n){
         if (n == 0) {
             return list.getFirst();
@@ -13,9 +12,6 @@ public class RecursionTask {
             return list.get(n) * numsProduct(n-1);
 
         }}
-
-
-
 
     public static void main(String[] args) {
         Scanner scnr = new Scanner(System.in);
@@ -35,8 +31,6 @@ public class RecursionTask {
         int fifth = scnr.nextInt();
         list.add(fifth);
         int outputVal = numsProduct(list.size()-1);
-
         System.out.println("All elements of list multiplied by one another: " + outputVal);
-
     }
 }
